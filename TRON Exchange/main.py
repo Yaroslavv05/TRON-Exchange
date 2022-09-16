@@ -125,7 +125,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_btc'] = message.text
                                                 if data['y_or_n_btc'] == 'Yes':
                                                     await FSMmain.enter_wallet_btc.set()
-                                                    you_get_btc = str(100 / float(btc_get))
+                                                    you_get_btc = str(float(data['enter_sum_btc']) / float(btc_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_btc']} {data['name_net']} You'll get: {you_get_btc} BTC (BEP-20)")
                                                     await bot.send_message(message.from_user.id, f'Enter your BTC (BEP-20) wallet to which you want to receive {data["name_net"]}', reply_markup=a)
 
@@ -219,7 +219,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_trx'] = message.text
                                                 if data['y_or_n_trx'] == 'Yes':
                                                     await FSMmain.enter_wallet_trx.set()
-                                                    you_get_trx = str(100 / float(trx_get))
+                                                    you_get_trx = str(float(data['enter_sum_trx']) / float(trx_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_trx']} {data['name_net']}\n\nYou'll get: {you_get_trx} TRX")
                                                     await bot.send_message(message.from_user.id, f'Enter your TRX wallet to which you want to receive {data["name_net"]}',reply_markup=a)
 
@@ -312,7 +312,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_eth'] = message.text
                                                 if data['y_or_n_eth'] == 'Yes':
                                                     await FSMmain.enter_wallet_eth.set()
-                                                    you_get_eth = str(100 / float(eth_get))
+                                                    you_get_eth = str(float(data['enter_sum_eth']) / float(eth_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_eth']} {data['name_net']}\n\nYou'll get: {you_get_eth} ETH")
                                                     await bot.send_message(message.from_user.id, f'Enter your ETH wallet to which you want to receive {data["name_net"]}', reply_markup=a)
 
@@ -421,7 +421,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_btc_bep'] = message.text
                                                 if data['y_or_n_btc_bep'] == 'Yes':
                                                     await FSMmain.enter_wallet_btc_bep.set()
-                                                    you_get_btc = str(100 / float(btc_get))
+                                                    you_get_btc = str(float(data['enter_sum_btc_bep']) / float(btc_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_btc_bep']} {data['name_net']} You'll get: {you_get_btc} BTC (BEP-20)")
                                                     await bot.send_message(message.from_user.id, f'Enter your BTC (BEP-20) wallet to which you want to receive {data["name_net"]}', reply_markup=a)
 
@@ -515,7 +515,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_trx_bep'] = message.text
                                                 if data['y_or_n_trx_bep'] == 'Yes':
                                                     await FSMmain.enter_wallet_trx_bep.set()
-                                                    you_get_trx = str(100 / float(trx_get))
+                                                    you_get_trx = str(float(data['enter_sum_trx_bep']) / float(trx_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_trx_bep']} {data['name_net']}\n\nYou'll get: {you_get_trx} TRX")
                                                     await bot.send_message(message.from_user.id, f'Enter your TRX wallet to which you want to receive {data["name_net"]}', reply_markup=a)
 
@@ -608,7 +608,7 @@ async def main(message: types.Message):
                                                     data['y_or_n_eth_bep'] = message.text
                                                 if data['y_or_n_eth_bep'] == 'Yes':
                                                     await FSMmain.enter_wallet_eth_bep.set()
-                                                    you_get_eth = str(100 / float(eth_get))
+                                                    you_get_eth = str(float(data['enter_sum_eth_bep']) / float(eth_get))
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_eth_bep']} {data['name_net']}\n\nYou'll get: {you_get_eth} ETH")
                                                     await bot.send_message(message.from_user.id, f'Enter your ETH wallet to which you want to receive {data["name_net"]}', reply_markup=a)
 
