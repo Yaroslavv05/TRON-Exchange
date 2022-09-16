@@ -97,7 +97,7 @@ async def main(message: types.Message):
                         if data['choise_coin_trc'] == 'Exchange USDT for BTC':
                             await FSMmain.select_sum_btc.set()
                             btc = client.get_symbol_ticker(symbol='BTCUSDT')
-                            btc_get = str(round(float(btc.get('price')), 0) + (round(float(btc.get('price')), 0)/ 100 * 10.5))
+                            btc_get = str(round(float(btc.get('price')), 0) - (round(float(btc.get('price')), 0)/ 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  BTC (BEP-20)\n\nExchange rate: 1 BTC (BEP-20) = {btc_get} {data["name_net"]}\n\nThe reserve is: 5,3268427  BTC (BEP-20)\n\nMinimum exchange amount USDT for BTC (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for BTC (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_btc)
@@ -191,7 +191,7 @@ async def main(message: types.Message):
                         elif data['choise_coin_trc'] == 'Exchange USDT for TRX':
                             await FSMmain.select_sum_trx.set()
                             trx = client.get_symbol_ticker(symbol='TRXUSDT')
-                            trx_get = str(round(float(trx.get('price')), 2) + (round(float(trx.get('price')), 2) / 100 * 10.5))
+                            trx_get = str(round(float(trx.get('price')), 2) - (round(float(trx.get('price')), 2) / 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  TRX (BEP-20)\n\nExchange rate: 1 TRX (BEP-20) = {trx_get} {data["name_net"]}\n\nThe reserve is: 671350  TRX (BEP-20)\n\nMinimum exchange amount USDT for TRX (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for TRX (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_trx)
@@ -284,7 +284,7 @@ async def main(message: types.Message):
                         elif data['choise_coin_trc'] == 'Exchange USDT for ETH':
                             await FSMmain.select_sum_eth.set()
                             eth = client.get_symbol_ticker(symbol='ETHUSDT')
-                            eth_get = str(round(float(eth.get('price')), 2) + (round(float(eth.get('price')), 2) / 100 * 10.5))
+                            eth_get = str(round(float(eth.get('price')), 2) - (round(float(eth.get('price')), 2) / 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  ETH (BEP-20)\n\nExchange rate: 1 ETH (BEP-20) = {eth_get} {data["name_net"]}\n\nThe reserve is: 1432  ETH (BEP-20)\n\nMinimum exchange amount USDT for ETH (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for ETH (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_eth)
@@ -393,7 +393,7 @@ async def main(message: types.Message):
                         if data['choise_coin_bep'] == 'Exchange USDT for BTC':
                             await FSMmain.select_sum_btc_bep.set()
                             btc = client.get_symbol_ticker(symbol='BTCUSDT')
-                            btc_get = str(round(float(btc.get('price')), 0) + (round(float(btc.get('price')), 0) / 100 * 10.5))
+                            btc_get = str(round(float(btc.get('price')), 0) - (round(float(btc.get('price')), 0) / 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  BTC (BEP-20)\n\nExchange rate: 1 BTC (BEP-20) = {btc_get} {data["name_net"]}\n\nThe reserve is: 5,3268427  BTC (BEP-20)\n\nMinimum exchange amount USDT for BTC (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for BTC (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_btc_bep)
@@ -487,7 +487,7 @@ async def main(message: types.Message):
                         elif data['choise_coin_bep'] == 'Exchange USDT for TRX':
                             await FSMmain.select_sum_trx_bep.set()
                             trx = client.get_symbol_ticker(symbol='TRXUSDT')
-                            trx_get = str(round(float(trx.get('price')), 2) + (round(float(trx.get('price')), 2) / 100 * 10.5))
+                            trx_get = str(round(float(trx.get('price')), 2) - (round(float(trx.get('price')), 2) / 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  TRX (BEP-20)\n\nExchange rate: 1 TRX (BEP-20) = {trx_get} {data["name_net"]}\n\nThe reserve is: 671350  TRX (BEP-20)\n\nMinimum exchange amount USDT for TRX (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for TRX (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_trx_bep)
@@ -580,7 +580,7 @@ async def main(message: types.Message):
                         elif data['choise_coin_bep'] == 'Exchange USDT for ETH':
                             await FSMmain.select_sum_eth_bep.set()
                             eth = client.get_symbol_ticker(symbol='ETHUSDT')
-                            eth_get = str(round(float(eth.get('price')), 2) + (round(float(eth.get('price')), 2) / 100 * 10.5))
+                            eth_get = str(round(float(eth.get('price')), 2) - (round(float(eth.get('price')), 2) / 100 * 10.5))
                             await bot.send_message(message.from_user.id, f'Do you want to exchange: {data["name_net"]} to  ETH (BEP-20)\n\nExchange rate: 1 ETH (BEP-20) = {eth_get} {data["name_net"]}\n\nThe reserve is: 1432  ETH (BEP-20)\n\nMinimum exchange amount USDT for ETH (BEP-20) = 100.0 USDT\nMaximum exchange amount USDT for ETH (BEP-20) = 100000.0\nUSDT', reply_markup=markup3)
 
                             @dp.message_handler(state=FSMmain.select_sum_eth_bep)
