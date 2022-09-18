@@ -612,7 +612,7 @@ async def main(message: types.Message):
                                                     await bot.send_message(message.from_user.id, f"You are giving away: {data['enter_sum_eth_bep']} {data['name_net']}\n\nYou'll get: {you_get_eth} ETH")
                                                     await bot.send_message(message.from_user.id, f'Enter your ETH wallet to which you want to receive ETH (BEP-20)', reply_markup=a)
 
-                                                    @dp.message_handler(state=FSMmain.enter_wallet_eth_bep)
+                                                    @dp.message_handler(state=FSMmain.enter_wallet_eth_bep)#gg
                                                     async def coin_price_vuvod(message: types.Message, state: FSMContext):
                                                         async with state.proxy() as data:
                                                             data['enter_wallet_eth_bep'] = message.text
