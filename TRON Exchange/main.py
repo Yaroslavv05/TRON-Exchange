@@ -144,7 +144,7 @@ async def main(message: types.Message):
                                                                 is_valid = validate_email(data['enter_eMail_btc'])
                                                                 if is_valid == True:
                                                                     await FSMmain.i_paid_btc.set()
-                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_btc"]}\n\nAmount of transfer: {data["enter_sum_btc"]} {data["name_net"]}\n\nTotal: {you_get_btc} BTC (Bitcoin)\n\nOpen the client from where you will transfer USDT, and enter the following information:\n0xf058148b438de5Ff7dA153E9AD353Fe44302d38E\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
+                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_btc"]}\n\nAmount of transfer: {data["enter_sum_btc"]} {data["name_net"]}\n\nTotal: {you_get_btc} BTC (Bitcoin)\n\nOpen the client from where you will transfer USDT, and enter the following information:\nTVc2areVhY1h1PTYRzSgAMNos4wgbQywGN\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
                                                                     await bot.send_message(message.from_user.id, '‼️Your ticket has been created, pay the amount of USDT specified in the application to the wallet specified above, after payment, click the "I paid" button.‼️')
 
                                                                     @dp.message_handler(state=FSMmain.i_paid_btc)
@@ -238,7 +238,7 @@ async def main(message: types.Message):
                                                                 is_valid = validate_email(data['enter_eMail_trx'])
                                                                 if is_valid == True:
                                                                     await FSMmain.i_paid_trx.set()
-                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_trx"]}\n\nAmount of transfer: {data["enter_sum_trx"]} {data["name_net"]}\n\nTotal: {you_get_trx} TRX (BEP-20)\n\nOpen the client from where you will transfer USDT, and enter the following information:\n0xf058148b438de5Ff7dA153E9AD353Fe44302d38E\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
+                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_trx"]}\n\nAmount of transfer: {data["enter_sum_trx"]} {data["name_net"]}\n\nTotal: {you_get_trx} TRX (BEP-20)\n\nOpen the client from where you will transfer USDT, and enter the following information:\nTVc2areVhY1h1PTYRzSgAMNos4wgbQywGN\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
                                                                     await bot.send_message(message.from_user.id, '‼️Your ticket has been created, pay the amount of USDT specified in the application to the wallet specified above, after payment, click the "I paid" button.‼️')
 
                                                                     @dp.message_handler(state=FSMmain.i_paid_trx)
@@ -331,7 +331,7 @@ async def main(message: types.Message):
                                                                 is_valid = validate_email(data['enter_eMail_eth'])
                                                                 if is_valid == True:
                                                                     await FSMmain.i_paid_eth.set()
-                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_eth"]}\n\nAmount of transfer: {data["enter_sum_eth"]} {data["name_net"]}\n\nTotal: {you_get_eth} ETH (ERC-20)\n\nOpen the client from where you will transfer USDT, and enter the following information:\n0xf058148b438de5Ff7dA153E9AD353Fe44302d38E\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
+                                                                    await bot.send_message(message.from_user.id, f'Wallet where you receive: {data["enter_wallet_eth"]}\n\nAmount of transfer: {data["enter_sum_eth"]} {data["name_net"]}\n\nTotal: {you_get_eth} ETH (ERC-20)\n\nOpen the client from where you will transfer USDT, and enter the following information:\nTVc2areVhY1h1PTYRzSgAMNos4wgbQywGN\n\n‼️{data["name_net"]}‼️', reply_markup=markup5)
                                                                     await bot.send_message(message.from_user.id, '‼️Your ticket has been created, pay the amount of USDT specified in the application to the wallet specified above, after payment, click the "I paid" button.‼️')
 
                                                                     @dp.message_handler(state=FSMmain.i_paid_eth)
